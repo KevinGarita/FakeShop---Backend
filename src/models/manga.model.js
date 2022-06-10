@@ -19,10 +19,6 @@ const manga = dbConnection.define('manga', {
         type: DataTypes.REAL,
         allowNull: false
     },
-    stock: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
     image_url: {
         type: DataTypes.STRING,
         allowNull: false

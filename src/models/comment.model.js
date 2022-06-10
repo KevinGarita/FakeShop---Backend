@@ -15,14 +15,10 @@ const comment = dbConnection.define('comment', {
         type: DataTypes.UUID,
         allowNull: false
     },
-    id_article: {
+    id_figure: {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    id_product: {
-        type: DataTypes.SMALLINT,
-        allowNull: false
-    }
 });
 
 module.exports = comment;

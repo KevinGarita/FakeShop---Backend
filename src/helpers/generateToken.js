@@ -14,12 +14,12 @@ const tokenSign = async (user) => { //Genera Token
     return jwt.sign(
         {   //Payload ! Carga útil //Solo poner datos publicos ya que se pueden ver.
             flagJWT: true ,
-            id: user.id, 
+            id_user: user.id_user, 
             role: user.role
         }, 
         config.token, //Token secreto 
         {
-            expiresIn: "5h", //tiempo de vida
+            expiresIn: "24h", //tiempo de vida
         } 
     );
 }

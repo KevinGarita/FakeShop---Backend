@@ -5,8 +5,8 @@ const swaggerSpec = {
     definition: {
         openapi: "3.0.0",
         info: {
-            title: "Title",
-            description: "Description",
+            title: "FakeShop project",
+            description: "This is a REST API project developed with Node, Express and Sequelize, with a database mounted on PostgreSQL",
             version: "1.0.0"
         },
         servers: [
