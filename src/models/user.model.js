@@ -1,7 +1,7 @@
 const {dbConnection, DataTypes} = require('../database/connection/dbConnection');
 
 const user = dbConnection.define('user', {
-    id: {
+    id_user: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4, // OR defaultValue: fn('uuid_generate_v4') para migraciones.
         // 'uuid_generate_v4' is only available in postgres + uuid-ossp(Extension)
