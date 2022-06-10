@@ -26,7 +26,7 @@ app.use(login); //login route
  *   User:
  *    type: object
  *    properties:
- *      id:
+ *      id_user:
  *        type: string
  *        format: uuid
  *        description: unique user identifier --> Schema Identifier
@@ -48,7 +48,7 @@ app.use(login); //login route
  *     - email
  *     - password
  *    example: 
- *     id: f0c0783f-5bc1-43f7-be0d-7182996f2d70
+ *     id_user: f0c0783f-5bc1-43f7-be0d-7182996f2d70
  *     username: test_user
  *     email: test@gmail.com
  *     password: $2a$10$vbGLX5coLe2oZuHIYqQYA.9k/UGR2Y34uFCyTuyHUGmB7EuboPSYS

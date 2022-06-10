@@ -4,10 +4,10 @@ const {encrypt, compare} = require('../helpers/bcrypt');
 const pagination = require('../helpers/pagination');
 
 exports.getObject = controllerHelper(async (req, res) => {
-    const id = req.params.id;
+    const id_user = req.params.id;
 
-    const result = await user.findByPk(id, {
-        attributes: ['id','username', 'email', 'role'],
+    const result = await user.findByPk(id_user, {
+        attributes: ['id_user','username', 'email', 'role'],
     });
 
     return result;
@@ -20,7 +20,7 @@ exports.getObjects = controllerHelper(async (req, res) => {
     const result = await user.findAndCountAll({
         distinct: true,
         where: filters,
-        attributes: ['id','username', 'email', 'role'],  
+        attributes: ['id_user','username', 'email', 'role'],  
         limit: pag.limit,
         offset: pag.page * pag.limit,
         order: [['username', 'ASC']]
@@ -40,10 +40,10 @@ exports.addObject = controllerHelper(async (req, res) => {
 });
 
 exports.updateObject = controllerHelper(async (req, res) => {
-    const id = req.params.id;
+    const id_user = req.params.id;
     const data = req.body;
 
-    const result = await user.findByPk(id);
+    const result = await user.findByPk(id_user);
 
     if(!result){
         return result
@@ -67,10 +67,10 @@ exports.updateObject = controllerHelper(async (req, res) => {
 });
 
 exports.deleteObject = controllerHelper(async (req, res) => {
-    const id = req.params.id;
+    const id_user = req.params.id;
     const password = req.body.password;
     
-    const result = await user.findByPk(id);
+    const result = await user.findByPk(id_user);
 
     if(!result){
         return result
@@ -90,9 +90,9 @@ exports.deleteObject = controllerHelper(async (req, res) => {
 });
 
 exports.adminDeleteObject = controllerHelper(async (req, res) => {
-    const id = req.params.id;
+    const id_user = req.params.id;
     
-    const result = await customers.findByPk(id);
+    const result = await customers.findByPk(id_user);
 
     if(!result){
         return result
